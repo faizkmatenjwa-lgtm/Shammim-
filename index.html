@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shone 💛</title>
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#fff4e0;--sun:#ffc93c;--coral:#ff6b5b;--pink:#ff9fb8;--teal:#2bb7a8;--ink:#4a2433;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Nunito',system-ui,sans-serif;font-size:1.05rem;line-height:1.65;overflow-x:hidden}
+h1,h2,h3{font-family:'Caprasimo',Georgia,serif;font-weight:400;margin:0;line-height:1.1}
+#gate{position:fixed;inset:0;z-index:20;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;background:linear-gradient(160deg,var(--sun),var(--coral) 60%,var(--pink));transition:opacity .9s,visibility .9s}
+#gate.gone{opacity:0;visibility:hidden}
+#gate h1{font-size:clamp(2.4rem,11vw,4rem);color:#fff;text-shadow:0 3px 0 rgba(74,36,51,.25)}
+#gate p{color:#fff;font-weight:600;margin:12px 0 30px}
+button{font:inherit;font-weight:800;background:#fff;color:var(--coral);border:0;border-radius:999px;padding:16px 36px;font-size:1.1rem;cursor:pointer;box-shadow:0 6px 0 rgba(74,36,51,.2)}
+button:active{transform:translateY(3px);box-shadow:0 3px 0 rgba(74,36,51,.2)}
+button:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.hero{padding:56px 22px 40px;text-align:center;background:linear-gradient(180deg,#ffe29a,var(--cream))}
+.hero h1{font-size:clamp(3rem,15vw,5.5rem);color:var(--coral)}
+.hero p{max-width:24em;margin:14px auto 0;font-weight:600}
+.photo{position:relative;margin:30px auto 0;width:min(78vw,300px);aspect-ratio:1;border-radius:46% 54% 50% 50%/55% 45% 55% 45%;background:linear-gradient(135deg,var(--pink),var(--sun));display:flex;align-items:center;justify-content:center;font-size:3rem;border:6px solid #fff;box-shadow:0 14px 0 var(--teal);overflow:hidden}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+main{max-width:640px;margin:0 auto;padding:10px 22px 80px}
+section{margin-top:54px}
+h2{font-size:2rem;color:var(--teal);margin-bottom:18px}
+.card{background:#fff;border-radius:26px;padding:26px 24px;margin-bottom:20px;box-shadow:0 8px 0 rgba(255,107,91,.18)}
+.card:nth-child(2n){box-shadow:0 8px 0 rgba(43,183,168,.22)}
+.card h3{font-size:1.5rem;color:var(--coral);margin-bottom:6px}
+.card p{margin:0}
+.solo{margin:34px 0 10px;display:flex;justify-content:center}
+.solo .photo{width:min(72vw,300px);aspect-ratio:3/4;border-radius:32px;margin:0;box-shadow:0 10px 0 var(--sun)}
+.note{background:var(--coral);color:#fff;border-radius:30px;padding:32px 26px;font-size:1.12rem;font-weight:600}
+.note h2{color:var(--sun)}
+.sign{font-family:'Caprasimo',serif;font-size:1.6rem;margin-top:14px;text-align:right}
+footer{text-align:center;padding:10px 20px 60px;font-weight:800;color:var(--coral)}
+#music{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:30;font-size:.9rem;padding:10px 16px;display:none;color:var(--ink)}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:25}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div id="gate">
+  <h1>Hey Shone!</h1>
+  <p>I made something just for you. Turn your volume up 🎶</p>
+  <button id="open">Tap to open</button>
+</div>
+
+<div class="hero">
+  <h1>Shone 💛</h1>
+  <p>My cuz. My homegirl. My best friend. This page is all about you.</p>
+  <div class="photo" id="p1"><img src="shone1.jpg" alt="Shone" style="object-position:50% 30%"></div>
+</div>
+
+<main>
+  <section>
+    <h2>Why you’re the best</h2>
+    <div class="card"><h3>You inspire me</h3><p>The way you carry yourself and keep going makes me want to be better too.</p></div>
+    <div class="card"><h3>You’re always there</h3><p>Whenever I needed you, you showed up. No questions, no excuses, just you.</p></div>
+    <div class="card"><h3>You’re so valuable</h3><p>You’re not just my cuz or my best friend. You’re one of the most precious people in my life.</p></div>
+  </section>
+
+  <div class="solo"><div class="photo" id="p2"><img src="shone2.jpg" alt="Shone" style="object-position:50% 40%"></div></div>
+
+  <section>
+    <div class="note">
+      <h2>A little note</h2>
+      Shone, thank you for every laugh, every talk and every time you had my back. I’m so lucky to call you my homegirl, my best friend and my family. You deserve to be celebrated out loud, so here it is.
+      <div class="sign">Forever your cuz 💛</div>
+    </div>
+  </section>
+</main>
+<footer>Made with love, just for you 🌈</footer>
+
+<button id="music" aria-label="Toggle music">⏸ Music</button>
+<canvas id="c"></canvas>
+<audio id="song" loop preload="auto" src="song.mp3"></audio>
+
+<script>
+var song = document.getElementById('song');
+var musicBtn = document.getElementById('music');
+
+function confetti(){
+  var c=document.getElementById('c'),x=c.getContext('2d');
+  c.width=innerWidth;c.height=innerHeight;
+  var cols=['#ffc93c','#ff6b5b','#ff9fb8','#2bb7a8','#ffffff'];
+  var p=[];for(var i=0;i<150;i++)p.push({x:Math.random()*c.width,y:-20-Math.random()*c.height*.5,r:5+Math.random()*5,vy:2+Math.random()*3,vx:-1+Math.random()*2,col:cols[i%5],a:Math.random()*6});
+  var t=0;
+  (function f(){x.clearRect(0,0,c.width,c.height);
+    p.forEach(function(q){q.y+=q.vy;q.x+=q.vx+Math.sin(q.a+=.05);x.fillStyle=q.col;x.fillRect(q.x,q.y,q.r,q.r*1.6)});
+    if(++t<280)requestAnimationFrame(f);else x.clearRect(0,0,c.width,c.height)})();
+}
+
+document.getElementById('open').addEventListener('click',function(){
+  document.getElementById('gate').classList.add('gone');
+  song.play().catch(function(){});
+  musicBtn.style.display='block';
+  if (!window.matchMedia('(prefers-reduced-motion:reduce)').matches) confetti();
+});
+musicBtn.addEventListener('click',function(){
+  if(song.paused){song.play();musicBtn.textContent='⏸ Music'}else{song.pause();musicBtn.textContent='▶ Music'}
+});
+</script>
+</body>
+</html>
